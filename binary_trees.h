@@ -49,5 +49,17 @@ unsigned int count_nodes(const binary_tree_t *tree);
 int is_complete(const binary_tree_t *tree, unsigned int i, unsigned int
 		 num_nodes);
 int binary_tree_is_complete(const binary_tree_t *tree);
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+size_t binary_tree_height(const binary_tree_t *tree);
+/**
+ * binary_tree_level - Traverses a binary tree level by level
+ * @tree: A pointer to the root node of the tree to traverse.
+ * @func: A pointer to a function to call for each node.
+ * @level: The level to traverse.
+ */
 
+void binary_tree_level(const binary_tree_t *tree, void (*func)(int)
+		, size_t level);
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 #endif
